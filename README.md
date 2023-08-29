@@ -43,6 +43,26 @@ here arr is object and split is a method that we call on arr object.
 
 So over all we know that arrays are objects in javascript because of having methods.And methods are functions that are attached to all the arrays that we create.
 
+### a-1. SLICE method
+Slice method is used to extract a part from an array without changing the original array.  
+Slice method is also used for strings.
+```javascript
+let arr=['a','b','c','d','e'];
+console.log(arr.slice(2));
+//Output is :-['c','d','e'];
+```
+
+here all the elements of array having index number 2 or more is split from the array(arr) and created a new array that we can see on output.
+
+```javascript
+let arr=['a','b','c','d','e'];
+console.log(arr.slice(2,4));
+//Output is :-['c','d'];
+```
+2 is starting point and 4 is the ending point to split arr.But here index 4 is not included.So that we can get the elements from index 2 to 3 only.
+
+
+
 
 
 
