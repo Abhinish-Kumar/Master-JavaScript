@@ -1,4 +1,4 @@
-# Master-JavaScript
+# Master-JavaScript (advance level)
 This is a master course of JavaScript. In this course you can learn how the things works in JavaScript when to use and how to use it. All the topics are in readme format.
 
 ## Story of JavaScript 
@@ -28,6 +28,22 @@ Everyone was releasing their own web browser, so Google was also going to lag be
 Google Chrome(browser)
 
 For so many browsers, the web developer had to write code that would support all browsers. This work took a lot of time and was also a bit confusing. To solve this problem, a conference was held in 2008 and an agreement was reached with all browser companies that all would use the same standard language for their browsers. Script 5 was then standardized in December 2009, which was supported in all browsers. The biggest update for JavaScript was ECMAScript 6, which added a lot of new features in it like let const  arrow function etc.
+
+# 1. Array?
+#### How to use and when to use.
+Arrays are like a block of container we can imagine it as a train with its boxes every box is connected with its corresponding box with serial number.In javascript we can put any type of value in arrays box or container eg:number,string,boolean,object or array.
+Arrays are object in javascript.
+## a.Array Methods
+Why array acctually do have methods?
+Methods are functions that we call on objects with dot notation.
+```javascript
+arr.split();
+```
+here arr is object and split is a method that we call on arr object.
+
+So over all we know that arrays are objects in javascript because of having methods.And methods are functions that are attached to all the arrays that we create.
+
+
 
 
 
