@@ -139,7 +139,7 @@ console.log(name);
  //['h', 's', 'i', 'n', 'i', 'h', 'b', 'a']
 ```
 
-```java
+```javascript
 let namea='Noor';
 console.log(namea.split('').reverse().join(''));
 // rooN
