@@ -127,10 +127,22 @@ console.log(arr.splice(1,3));//from 1st index delete next 3 elements
 console.log(arr);//['a', 'e']
 ```
 
+### a-3. REVERSE method (mutates)
 
+Used to reverse the array
 
+```javascript
+let name=['a','b','h','i','n','i','s','h'];
+console.log(name.reverse());
+//['h', 's', 'i', 'n', 'i', 'h', 'b', 'a']
+console.log(name);
+ //['h', 's', 'i', 'n', 'i', 'h', 'b', 'a']
+```
 
-
-
+```javascript
+let namea='Noor';
+console.log(namea.split('').reverse().join(''));
+// rooN
+```
 
 
