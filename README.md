@@ -97,6 +97,36 @@ console.log(x);
 
 Note:you can use anyone to clone a array.
 
+### a-2. SPLICE method
+
+Splice is also like slice but it returns a part of the original array by mutating it.
+Means we can get a part of arrary but our original array also changes while doing this.
+The first parameter of splice method is similar to the slice.
+
+```javascript
+let arr=['a','b','c','d','e'];
+console.log(arr.splice(2));//['c', 'd', 'e']
+console.log(arr);//['a', 'b']
+```
+
+it is mostly used to delete last element of the array.Like in calculator and in add to cart functionality.
+
+```javascript
+let arr=['a','b','c','d','e'];
+console.log(arr.splice(-1));//['e']
+console.log(arr);//['a', 'b', 'c', 'd']
+```
+
+Second parameter is for deletecount functionality.
+that deletes the number of elements that we pass in it.
+
+```javascript
+let arr=['a','b','c','d','e'];
+console.log(arr.splice(1,3));//from 1st index delete next 3 elements
+ //['b', 'c', 'd']
+console.log(arr);//['a', 'e']
+```
+
 
 
 
