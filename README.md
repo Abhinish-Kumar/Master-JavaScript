@@ -173,6 +173,7 @@ console.log([...a,...b]);
 
 
 In this method we pass the separator to join the array elements with that separator.
+Join method returns a new string of combined array elements.
 
 ```javascript
 let a=[1,2,3,4,5];
@@ -180,4 +181,10 @@ let b=[6,7,8,9,10];
 console.log([...a,...b].join('-'));
 //1-2-3-4-5-6-7-8-9-10
 ```
+It does not print the undefined and null array elements.
+
+
+
+
+
 
