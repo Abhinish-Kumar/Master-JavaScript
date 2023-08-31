@@ -87,6 +87,16 @@ console.log(x);
 //Output is :- ['a', 'b', 'c', 'd', 'e'];
 ```
 
+or we can also copy array using spread operator
+```javascript
+let arr=['a','b','c','d','e'];
+let x=[...arr];
+console.log(x);
+//Output is :- ['a', 'b', 'c', 'd', 'e'];
+```
+
+Note:you can use anyone to clone a array.
+
 
 
 
