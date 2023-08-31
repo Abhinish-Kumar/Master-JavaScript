@@ -152,4 +152,32 @@ console.log(namea.split('').reverse().join(''));
 // rooN
 ```
 
+### a-4. CONCAT method (non mutable)
+
+```javascript
+let a=[1,2,3,4,5];
+let b=[6,7,8,9,10];
+console.log(a.concat(b));
+//[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+There is also another way that can concat tha arrays.
+
+```javascript
+let a=[1,2,3,4,5];
+let b=[6,7,8,9,10];
+console.log([...a,...b]);
+//[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+### a-4. JOIN method (non mutable)
+
+
+In this method we pass the separator to join the array elements with that separator.
+
+```javascript
+let a=[1,2,3,4,5];
+let b=[6,7,8,9,10];
+console.log([...a,...b].join('-'));
+//1-2-3-4-5-6-7-8-9-10
+```
 
