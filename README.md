@@ -126,6 +126,13 @@ console.log(arr.splice(1,3));//from 1st index delete next 3 elements
  //['b', 'c', 'd']
 console.log(arr);//['a', 'e']
 ```
+Third parameter is the element that we put at the place of deleted array.
+Q1 Insert Apple at index 1 
+```javascript
+let arr=['a','b','c','d','e'];
+console.log(arr.splice(1,0,"Apple");//[] 
+console.log(arr);//['a', 'Apple', 'b', 'c', 'd', 'e']
+```
 
 ### a-3. REVERSE method (mutates)
 
