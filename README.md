@@ -71,6 +71,24 @@ console.log(arr.slice(-2));
 -1 is mostly used to get the last element of the array.
 
 
+Q1.print all the elements of the array except first and last element.
+```javascript
+let arr=['a','b','c','d','e'];
+console.log(arr.slice(1,-1));
+//Output is :-['b', 'c', 'd'];
+```
+
+Q2.Can we create a copy of a array using slice?
+yes
+```javascript
+let arr=['a','b','c','d','e'];
+let x=arr.slice()
+console.log(x);
+//Output is :- ['a', 'b', 'c', 'd', 'e'];
+```
+
+
+
 
 
 
