@@ -62,7 +62,13 @@ console.log(arr.slice(2,4));
 ```
 2 is starting point and 4 is the ending point to split arr.But here index 4 is not included.So that we can get the elements from index 2 to 3 only.
 
-
+```javascript
+let arr=['a','b','c','d','e'];
+console.log(arr.slice(-2));
+//Output is :-['d', 'e'];
+```
+-ve sign is used to get the data from the last index.
+-1 is mostly used to get the last element of the array.
 
 
 
