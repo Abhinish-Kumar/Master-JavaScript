@@ -232,7 +232,23 @@ console.log('abhinish'.at(-1));  //h
 ```
 
 
+# practice Q1
+```javascript
+//fins the highest bank transaction 
 
+const tranctions=[4,34,53,75,2,6,654,75,77,3430,49];
+function findha(ht){
+    let re;
+    for(let i=0;i<ht.length;i++){
+        if(ht[i]>ht[i+1]){
+            re=ht[i];
+        }
+    }
+    return re;
+}
+
+console.log(findha(tranctions));//3430
+```
 
 
 
