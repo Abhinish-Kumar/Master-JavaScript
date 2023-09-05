@@ -185,6 +185,57 @@ console.log([...a,...b].join('-'));
 It does not print the undefined and null array elements.
 
 
+### a-5. new AT() method
+
+The at() method of Array instances takes an integer value and returns the item at that index, allowing for +ve and -ve integers. Negative integers count back from the last item in the array.
+
+```javascript
+//Syntax :- at(index)
+```
+1. Find the element of the array at any position
+
+```javascript
+const arr=[1,2,3,4,5,6,7,8,9,10];
+
+//with bracket notation
+console.log(arr[0]);//1
+
+//By using at()
+console.log(arr.at(0));//1
+```
+Both work same so why we use the at() method.
+The at() method is equivalent to the bracket notation when index is non-negative.
+Means by using at method you can get the elements with -ve index number.
+
+2. Find the last element of an array.
+```javascript
+const arr=[1,2,3,4,5,6,7,8,9,10];
+//1st way
+console.log(arr[arr.length-1]);//10
+
+
+//2nd
+console.log(arr.slice(-1));//return arr [10]
+console.log(arr.slice(-1)[0]);//10
+
+
+//3rd
+console.log(arr.at(-1));
+```
+Note:-If you want to get only last element use at();
+And if you want to apply chaining method to array use the method of slice and bracket notation.
+3. It also works with "string"
+
+```javascript
+console.log('abhinish'.at(1));  //b
+console.log('abhinish'.at(-1));  //h
+```
+
+
+
+
+
+
 
 
 
