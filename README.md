@@ -289,9 +289,96 @@ You withdraw 130
 You deposit 70
 You deposit 300
 ```
- 
+
+
+ ```javascript
+//By using forEach
+
+const movements=[200,450,-400,300,-650,-130,70,300];
+
+movements.forEach(function(movement){
+  if(movement>0){
+    console.log(`You deposit ${movement}`);
+  }
+  else{
+    console.log(`You withdraw ${Math.abs(movement)}`);
+  }
+})
+
+
+//Output:
+
+You deposit 200
+You deposit 450
+You withdraw 400
+You deposit 300
+You withdraw 650
+You withdraw 130
+You deposit 70
+You deposit 300
+```
+
+How it works
+
+1. in first iteration 0:function(200) function is called with 200.
+2. in second iteration 1:function(450) function is called with 450.Tii the length of the array.
+
+#### Q2. Write a function to withdraw and deposit of money with number of transections.
+
+```javascript
+//By using for of
+
+const movements=[200,450,-400,300,-650,-130,70,300];
+
+for(const [i,movement] of movements.entries()){
+  if(movement>0){
+    console.log(`On ${i+1} day You deposit ${movement}`);
+  }
+  else{
+    console.log(`On ${i+1} day You withdraw ${Math.abs(movement)}`);
+  }
+}
+
+
+//Output:
+
+On 1 day You deposit 200
+On 2 day You deposit 450
+On 3 day You withdraw 400
+On 4 day You deposit 300
+On 5 day You withdraw 650
+On 6 day You withdraw 130
+On 7 day You deposit 70
+On 8 day You deposit 300
+```
 
 
 
+```javascript
+//By using forEach
+
+const movements=[200,450,-400,300,-650,-130,70,300];
+
+for(const [i,movement] of movements.entries()){
+  if(movement>0){
+    console.log(`On ${i+1} day You deposit ${movement}`);
+  }
+  else{
+    console.log(`On ${i+1} day You withdraw ${Math.abs(movement)}`);
+  }
+}
+
+
+//Output:
+
+On 1 day You deposit 200
+On 2 day You deposit 450
+On 3 day You withdraw 400
+On 4 day You deposit 300
+On 5 day You withdraw 650
+On 6 day You withdraw 130
+On 7 day You deposit 70
+On 8 day You deposit 300
+```
 
 
