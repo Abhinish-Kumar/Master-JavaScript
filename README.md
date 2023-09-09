@@ -389,5 +389,72 @@ By using forEach its easy to do the same program.Because of the power of forEach
 6. You can not use continue break and continue statement.
 7. SO here you use for of loop to use the break and continue to come out of the loop.
 
+### forEach with Maps and Sets
+
+For each is also avaliable for Maps and Sets.
+
+
+### with Map()
+```javascript
+const currencies = new Map([
+  ['key','value'],
+  ['USD','United States Dollar'],
+  ['EUR','Euro'],
+  ['GBP','Pound Sterling']
+]);
+
+
+// In map the first is key and second is the value.
+
+currencies.forEach(function(value,key,map){
+  console.log(`${key}:${value}`);
+})
+
+//Output:
+
+key:value
+USD:United States Dollar
+EUR:Euro
+GBP:Pound Sterling
+```
+
+
+
+
+
+
+
+### with Set([iterables]) :contain uniqew value
+```javascript
+const currenciesUnique=new Set(['USD','GBP','USD','EUR']);
+console.log(currenciesUnique);
+//Set(3) { 'USD', 'GBP', 'EUR' }
+```
+
+```javascript
+const currenciesUnique=new Set(['USD','GBP','USD','EUR']);
+
+currenciesUnique.forEach(function(value,key,set){
+    console.log(`${key}:${value}`);
+})
+
+
+//Output
+USD:USD
+GBP:GBP
+EUR:EUR
+```
+
+The key and the value is same why is it like that.Becaue a set doesnot have keys.
+
+This is not a misteke this is intentially dome by developers to maintain the functionallity of the forEach meth with 3 arguments.it is like (value,value,set).
+
+or (value,_,set)._ indicates that its not necessary.
+
+
+
+
+
+
 
 
