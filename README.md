@@ -255,6 +255,42 @@ console.log(findha(tranctions));//3430
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
+1. ForEach is higher order function that acceps a callback function in order to what to do with the elements of the array.
+2. ForEach function call the function that is passed in it by itself.
+3. Callback functions are the functions that tells the higherorder functions what to do.
+4. Higher order functions are the functions that acceps the another functions as an arguments and return the function as its returning value.
+
+#### Q1. Write a functions to withdraw and deposit of monety.
+
+```javascript
+//By using for of
+
+const movements=[200,450,-400,300,-650,-130,70,300];
+
+for(const movement of movements){
+  if(movement>0){
+    console.log(`You deposit ${movement}`);
+  }
+  else{
+    console.log(`You withdraw ${Math.abs(movement)}`);
+  }
+}
+
+
+
+//Output:
+
+You deposit 200
+You deposit 450
+You withdraw 400
+You deposit 300
+You withdraw 650
+You withdraw 130
+You deposit 70
+You deposit 300
+```
+ 
+
 
 
 
