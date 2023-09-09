@@ -359,15 +359,14 @@ On 8 day You deposit 300
 
 const movements=[200,450,-400,300,-650,-130,70,300];
 
-for(const [i,movement] of movements.entries()){
+movements.forEach(function(movement,index,array){
   if(movement>0){
-    console.log(`On ${i+1} day You deposit ${movement}`);
+    console.log(`On ${index+1} day You deposit ${movement}`);
   }
   else{
-    console.log(`On ${i+1} day You withdraw ${Math.abs(movement)}`);
+   console.log(`On ${index+1} day You withdraw ${Math.abs(movement)}`);
   }
-}
-
+})
 
 //Output:
 
@@ -380,5 +379,15 @@ On 6 day You withdraw 130
 On 7 day You deposit 70
 On 8 day You deposit 300
 ```
+
+By using forEach its easy to do the same program.Because of the power of forEach function or method.
+1. The callback function accepts (currentElement,index,fullarray).
+2. Name of the parameter does not matter only matter its order.
+3. Use short names (mov,i,arr).
+4. Use this if you have to do the operation on array and with its index.
+5. When should you use for of and wen to use the forEach.
+6. You can not use continue break and continue statement.
+7. SO here you use for of loop to use the break and continue to come out of the loop.
+
 
 
