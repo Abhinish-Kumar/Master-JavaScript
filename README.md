@@ -457,6 +457,20 @@ or (value,_,set)._ indicates that its not necessary.
 
 Dom manupulation ------18
 
+## 1st coding chalange
+
+1. Julie and kate are doing a study on dogs, so each of them asked five dog owners about their dogs age and store the data into an array (one array for each) For now they are just.Interested in knowing whether a dog is an adult or a puppy. A dog is an adult if it is at least three years old, and it's a puppy. If it's less than three years old.
+Create a function  "checkdogs" Which asserts 2 arrays of dogs ages, ('dogsJulie' and 'dogskat').And it does the following
+2. Julie found out that the owners of the first and the last Two dogs actually have cats, not dogs. So creators shallow copy of Julies array and.Remove the cat edges from the.Copied array (because it's a bad practice to mutate function parameters).
+3.  Create an array with both  julies, corrected and kathe data.
+4.  for each remaining dog load to the console where it's an adult ("dog One is an adult and is five years old') or a puppy ('Dog number 2 is still a puppy')
+5.  Run the funciton for both test database.
+
+```javascript
+
+```
+
+
 
 
 
