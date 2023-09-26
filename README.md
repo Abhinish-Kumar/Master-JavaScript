@@ -590,18 +590,35 @@ const positive="positive";
 const negative="negative";
 
 function hasFun(message){
-    return message.includes("fun")?positive:negative;
+    return message.includes("fun")?positive.toUpperCase():negative.toUpperCase();
     
 }
 
 console.log(hasFun("this is a funny video"))
 console.log(hasFun("this is a bad video"))
 
-\\positive
-\\negative
+\\POSITIVE
+\\NEGATIVE
 ```
 
+7. Return an array with email based on the striing provided.
+Ans: string.split();
 
+a. Returns an array of strings based on the separator 
+b. split() takes two arguments.
+--Separator-lets the method knows where you want to divide up the string.
+--Limit(optional) - specifies if you want to limit the number of entries in the array.
+
+```javascript
+
+function splitEmil(emailList){
+    return emailList.split(", ");
+}
+
+console.log(splitEmil("apple.@gmail.com,ball.@gmail.com,cat.@gmail.com"))
+
+\\[ 'apple.@gmail.com,ball.@gmail.com,cat.@gmail.com' ]
+```
 
 
 
