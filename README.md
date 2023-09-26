@@ -495,7 +495,51 @@ console.log(findPassLength("12345676744"))
 
 2. Trim the empty spaces at the beginning and end of the string.(save password with no side white space).
 
-Ans
+Ans 
+```javascript
+const success="Success";
+const needLongPassword="Password should be atleast 8 charachters";
+
+function findPassLength(password){
+    console.log("before trim "+ password.length)
+    console.log("afterr trim" + password.trim().length)
+    
+}
+
+findPassLength("  1234567  ")
+findPassLength("  12345676744  ")
+
+\\before trim 11
+\\afterr trim7
+\\before trim 15
+\\afterr trim11
+```
+
+3. Chech the phone number and check its country code.(string.startsWith()).
+
+Ans string.startsWith()
+
+a. Returns a boolean (true or false) based on whether the search string is found.
+b. startsWith() has two parameters : the search string that we are looking for and the position where we want to start the search.
+
+```javascript
+const success="valid";
+const unvalid="Unvalid phone number";
+
+function findPassLength(number){
+    return number.startsWith("+91")?success:unvalid;
+    
+}
+
+console.log(findPassLength("+9188728198"))
+console.log(findPassLength("+82827328"))
+console.log(findPassLength("91827328"))
+
+\\valid
+\\Unvalid phone number
+\\Unvalid phone number
+
+```
 
 
 
