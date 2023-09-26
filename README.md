@@ -540,10 +540,66 @@ console.log(findPassLength("91827328"))
 \\Unvalid phone number
 
 ```
+4. return the city string in all lowercase letters.
+Ans: string.toLowerCase()
+
+a. Return a new string in all lowercse letters
+ --Does not modify the original string.
+b toLowerCase() does not taking any arguments.
+
+```javascript
+function findPassLength(a="This Is my citY"){
+    return a.toLowerCase();
+    
+}
+
+console.log(findPassLength())
+
+\\this is my city
+
+```
 
 
+5. Return the heading in all uppercase letters.
+Ans: string.toUpperCase().
 
+a. Return a new string in all uppercase letters
+--Does not modify the original string
+b. toUpperCase() does not take any arguments.
 
+```javascript
+function findPassLength(a="This Is my citY"){
+    return a.toUpperCase();
+    
+}
+
+console.log(findPassLength())
+
+\\this is my city
+
+```
+
+6. Determine if the word "fun" is included in a string.
+Ans: string.includes()
+
+a. Return a boolean based on whether or not the search string was found.
+b. includes() takes one required arguments, which is the string that is going to be searched for in the string the method is applied to.
+
+```javascript
+const positive="positive";
+const negative="negative";
+
+function hasFun(message){
+    return message.includes("fun")?positive:negative;
+    
+}
+
+console.log(hasFun("this is a funny video"))
+console.log(hasFun("this is a bad video"))
+
+\\positive
+\\negative
+```
 
 
 
