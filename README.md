@@ -473,7 +473,7 @@ Create a function  "checkdogs" Which asserts 2 arrays of dogs ages, ('dogsJulie'
 
 # String manipulation (master)
 
-1. Q Find the length of the password.
+#### 1. Q Find the length of the password.
 
 Ans :-Js has a built in length property length.It returns the string as a number.
 
@@ -493,7 +493,7 @@ console.log(findPassLength("12345676744"))
 \\ Success
 ```
 
-2. Trim the empty spaces at the beginning and end of the string.(save password with no side white space).
+#### 2. Trim the empty spaces at the beginning and end of the string.(save password with no side white space).
 
 Ans 
 ```javascript
@@ -515,7 +515,7 @@ findPassLength("  12345676744  ")
 \\afterr trim11
 ```
 
-3. Chech the phone number and check its country code.(string.startsWith()).
+#### 3. Chech the phone number and check its country code.(string.startsWith()).
 
 Ans string.startsWith()
 
@@ -540,7 +540,7 @@ console.log(findPassLength("91827328"))
 \\Unvalid phone number
 
 ```
-4. return the city string in all lowercase letters.
+#### 4. return the city string in all lowercase letters.
 Ans: string.toLowerCase()
 
 a. Return a new string in all lowercse letters
@@ -560,7 +560,7 @@ console.log(findPassLength())
 ```
 
 
-5. Return the heading in all uppercase letters.
+#### 5. Return the heading in all uppercase letters.
 Ans: string.toUpperCase().
 
 a. Return a new string in all uppercase letters
@@ -579,7 +579,7 @@ console.log(findPassLength())
 
 ```
 
-6. Determine if the word "fun" is included in a string.
+#### 6. Determine if the word "fun" is included in a string.
 Ans: string.includes()
 
 a. Return a boolean based on whether or not the search string was found.
@@ -601,7 +601,7 @@ console.log(hasFun("this is a bad video"))
 \\NEGATIVE
 ```
 
-7. Return an array with email based on the striing provided.
+#### 7. Return an array with email based on the striing provided.
 Ans: string.split();
 
 a. Returns an array of strings based on the separator 
@@ -620,7 +620,28 @@ console.log(splitEmil("apple.@gmail.com,ball.@gmail.com,cat.@gmail.com"))
 \\[ 'apple.@gmail.com,ball.@gmail.com,cat.@gmail.com' ]
 ```
 
+#### 8. Return a slice string with the last four digits of an account number.
+Ans: string.slice()
+a. Return an extracted section of a string.
+--Does not modify the original string.
+b. slice() has two parameters:
+--indexStart(required)-index of the first character to include in the returned substring.
 
+--indexEnd(optional)--index of the first character to exclude from the returned substring.
+
+```javascript
+function getLastNumner(accNumber){
+    return accNumber.slice(5);
+}
+
+console.log(getLastNumner("123456789"))
+
+\\6789
+
+```
+
+
+#### 9. Update the typo in the string of emails.
 
 
 
