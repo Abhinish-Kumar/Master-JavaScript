@@ -643,11 +643,36 @@ console.log(getLastNumner("123456789"))
 
 #### 9. Update the typo in the string of emails.
 
+Ans string.replace()
 
+a. Returns a new string with the all the instances matched by the replacement text.
+--Does not modify the original string.
+b. replace() has two parameters: the pattern that needs to be replaced and the actual replacement.
 
+```javascript
+function splitEmil(emailList){
+    return emailList.replace('gmail.com','npm.com')
+}
 
+console.log(splitEmil("apple.@gmail.com,ball.@gmail.com,cat.@gmail.com"))
 
+\\apple.@npm.com,ball.@gmail.com,cat.@gmail.com
 
+```
+
+#### 10. Combine two strings into a single string.
+Ans: string.concat();
+a. Return a new ,concatenated string
+--Does not modify the original string
+b. concat() can take as many parameters/strings as needed depending on what is going to be concatenated.
+
+```javascript
+function splitEmil(fname="abhi",lname="kumar",other="Big b"){
+    return fname.concat(" ",lname," ",other);
+}
+
+console.log(splitEmil())
+```
 
 
 
