@@ -471,6 +471,48 @@ Create a function  "checkdogs" Which asserts 2 arrays of dogs ages, ('dogsJulie'
 ```
 
 
+# String manipulation (master)
+
+1. Q Find the length of the password.
+
+Ans :-Js has a built in length property length.It returns the string as a number.
+
+```javascript
+const success="Success";
+const needLongPassword="Password should be atleast 8 charachters";
+
+function findPassLength(password){
+    return password.length>=8?success:needLongPassword;
+}
+
+console.log(findPassLength("1234567"))
+console.log(findPassLength("12345676744"))
+
+
+\\ Password should be atleast 8 charachters
+\\ Success
+```
+
+2. Trim the empty spaces at the beginning and end of the string.(save password with no side white space).
+
+Ans
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
