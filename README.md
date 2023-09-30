@@ -31,6 +31,52 @@ Google Chrome(browser)
 
 For so many browsers, the web developer had to write code that would support all browsers. This work took a lot of time and was also a bit confusing. To solve this problem, a conference was held in 2008 and an agreement was reached with all browser companies that all would use the same standard language for their browsers. Script 5 was then standardized in December 2009, which was supported in all browsers. The biggest update for JavaScript was ECMAScript 6, which added a lot of new features in it like let const  arrow function etc.
 
+
+# Javascript Essentials (Modern Javascript)
+
+1. HTML is the Language of Web Content.
+2. CSS is the Language of Web Style.
+3. JS is the language of That brings all these together.
+
+##### Javascript is used as
+1. Vanilla JavaScript
+2. ECMAScript
+3. TypeScript
+4. ES6
+5. ES2015
+6. CoffeeScript
+7. Node js
+8. WebPack
+9. JSX
+10. Gulp
+11. Babel
+12. Web Pack
+13. Angular
+14. React
+15. Vue.js
+
+Npm,Web Pack,Gulp are help applications.
+
+#### Toolsa for Working with Javascript
+
+1. Modern Brower
+2. Code editor
+3. Live server
+4. The browser console
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 1. Array?
 #### How to use and when to use.
 Arrays are like a block of container we can imagine it as a train with its boxes every box is connected with its corresponding box with serial number.In javascript we can put any type of value in arrays box or container eg:number,string,boolean,object or array.
