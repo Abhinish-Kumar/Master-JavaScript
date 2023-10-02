@@ -424,6 +424,92 @@ document.addEventListener("keydown", function (event) {
 
 ```
 
+### class Object blueprint
+
+Creating object blueprint or template using classes.Classes work as an template for objects.
+If you create a object of class the object will automatically get the older properties and methods of the class.
+Means we make change on class property it will reflect to the every instance of the class (object that are created by using this class)
+
+#### There are two ways to create class
+
+1. class declaration : class Name{}
+2. class expression : const Name=class{}
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <script src="class.js" type="module"></script>
+          <script src="script.js" type="module"></script>
+</head>
+<body>
+          
+</body>
+</html>
+```
+
+class.js
+
+```javascript
+
+class Person {
+          // Define a constructor method
+          constructor(name, age) {
+            // Assign the parameters to the properties of the object
+            this.name = name;
+            this.age = age;
+          }
+        
+          // Define a method named greet
+          greet() {
+            // Print a greeting message using the name property
+            console.log("Hello, I am " + this.name);
+          }
+        }
+        
+
+        export default Person;
+```
+
+
+script.js
+
+```javascript
+import Person from "./class.js";
+
+
+        // Create a new object with the Person class
+        var person1 = new Person("Alice", 25);
+
+
+
+
+        // Access the properties and methods of the object
+        console.log(person1.age); // 25
+        person1.greet(); // Hello, I am Alice
+        
+```
+
+#### Note
+1. declare a class before use.
+2. Place your class in separate file and import from there.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # 1. Array?
