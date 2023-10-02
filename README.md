@@ -373,7 +373,56 @@ document.addEventListener("keydown", function (event) {
 ```
 
 
+or 
 
+
+```javascript
+
+// Define an object that represents the box element and its properties
+var box = {
+  element: document.getElementById("box"),
+  width: 0,
+  height: 0,
+  color: "white",
+  // Define a method that changes the width of the box
+  changeWidth: function () {
+    // Increment the width by 100
+    this.width += 100;
+    // Set the new width to the box element
+    this.element.style.width = this.width + "px";
+    // Change the background color of the box
+    this.element.style.backgroundColor = "green";
+    // Change the text color of the box
+    this.element.style.color = "white";
+  },
+  // Define a method that changes the height of the box
+  changeHeight: function () {
+    // Increment the height by 100
+    this.height += 100;
+    // Set the new height to the box element
+    this.element.style.height = this.height + "px";
+    // Change the background color of the box
+    this.element.style.backgroundColor = "green";
+    // Change the text color of the box
+    this.element.style.color = "white";
+  }
+};
+
+// Add an event listener to the document object
+document.addEventListener("keydown", function (event) {
+  // Check if the right arrow key was pressed
+  if (event.keyCode == 39) {
+    // Call the changeWidth method of the box object
+    box.changeWidth();
+  }
+  // Check if the left arrow key was pressed
+  if (event.keyCode == 37) {
+    // Call the changeHeight method of the box object
+    box.changeHeight();
+  }
+});
+
+```
 
 
 
