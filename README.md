@@ -207,6 +207,65 @@ console.log(box);
 
 ```
 
+#### Object properties
+
+1. Object properties are defined using a collon separated key-value pair.
+2. Key or name can be any string and it is placed at the left and the value can be any data-type.
+3. Name can contain letter,digit,$,underscore.
+
+
+#### Accessing Object 
+
+```javascript
+
+const box={};
+console.og("This is a box:",box);
+
+```
+
+
+#### Accessing Object Properties
+
+1. Dot notation:-is called dot-notation because you use the dot to separate the different property.
+
+```javascript
+const car={
+    name:"bmw"
+}
+
+console.log(car.name);
+```
+
+2. Bracket notaion:-it allows to use more advance things and give us more control to access the property.
+
+```javascript
+const car={
+    name:"bmw",
+    info:{
+        color:"red"
+    }
+}
+
+// 1st use
+console.log(car["name"]);//BMW
+
+//2nd use (we can use the variable to get the property of an object
+
+let n="name";
+console.log(car[n]);//BMW
+
+console.log(name["info"]["color"]);//red
+```
+
+```javascript
+//3rd use (We can use key of the property which not follow the naming convention).
+const person={1:"first"}
+console.log(person["1"]);//first
+```
+
+
+
+
 
 
 
