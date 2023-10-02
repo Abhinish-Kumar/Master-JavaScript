@@ -265,8 +265,50 @@ console.log(person["1"]);//first
 
 
 #### Object methods
+Object can contain contain their own function.These function typically perform actions on properties of object and when a function is inside in a object is called as method.
 
+There are two ways to define a method.
 
+```javascript
+const car={
+    name:"Sujuki",
+   firstMethod:function(a){
+       console.log(this.name)
+   }
+}
+car.firstMethod()//Sujuki
+```
+
+or
+
+```javascript
+const car={
+    name:"Sujuki",
+   secondMethod(a){
+       console.log(this.name)
+   }
+}
+car.secondMethod()//Sujuki
+```
+Example1.
+
+```javascript
+const car={
+    name:"Sujuki",
+   firstMethod(newName){
+       this.name=newName;
+   }
+}
+
+console.log(car.name)//Sujuki
+
+car.firstMethod("BMW");
+
+console.log(car.name)//BMW
+
+```
+The value is changed only on the user browser at that moment.It is used to control somethin like in game to move front and back by pressing keys.
+Example2.
 
 
 
