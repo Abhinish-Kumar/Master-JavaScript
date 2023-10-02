@@ -152,16 +152,60 @@ export default person;
 You can not get person object in console because person object is only available for that info.js file.
 
 
+### Object
+1. With javascript we are working with objects that are based on prototypes.
+2. JS deals with objects as we deals with the real world objects like a car or a bag all the object has its own property.
+3. Each object is a unique instance of an object prototype.
+4. like all the bags have two straps are common in all the bags and all are open at top.
+5. Methods:-property changing features inside objects.
+6. Eg :- same method to open and close the bag.
+7. Objects  can contain the other object.
+
+
+Javascript object is the collection of data and properties and methods that describes the objects and what it can do.
+
+```javascript
+const obj={};
+//curly brackets define the object
+
+const obj1={
+key:"value", //property defined as key-value pairs.
+}
+```
+1. values can be any data type.
+2. Properties can nest sub-objects with their own properties.
+3. Methods are properties containing function.
+4. This keywords simply refers to the current object.
 
 
 
+#### Object container
+
+The object container somewhere to live.Foe this we use a container called variable or constant variable.
+
+```javascript
+const box={}
+```
+
+const is the constant variable. (box)   is the name of the container. Whaterver is at RHS is placed at that box container.
+
+#### Objects are typically constants
+
+We can change the properties of the object inside the container.We can't remove or replace object from the container.
+
+```javascript
+const box={name:"magic box"}
+
+box=5;//error its a consant
+
+box.inside="apple"
+
+console.log(box);
+
+//{name: 'magic box', inside: 'apple'}
 
 
-
-
-
-
-
+```
 
 
 
