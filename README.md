@@ -101,6 +101,37 @@ Multiline comment
 8. Select code press CTRL + / (for comment).
 
 
+#### Js in html document
+
+We have to put the js file at the bottom so that it can access the html elements easily and manupulate them.But when we put it on head section compiler runs the html line by line and if it runs the js file it does not get the body element and show error to the console because our body is not loaded yet.
+
+#### Moder javascript loading 
+If you want to use JS in head section use "asunc" and "defer".Normally if you put the js in head section.
+
+1. HTML parsing.
+2. HTML parsing stop + Javascript Downloaded.
+3. Html parsing stop + Javascript Executed.
+4. Javascript Execuition Complete + Remaining HTML content is loaded.
+
+The above is called as Content and rendering blocking.Because it blocks the rendering of HTML Content it slow down the website.
+
+#### Async
+Browser downloads js in parallel while HTML renders.When JS is fully loaded,rendering stops while JS is executed.
+
+1. HTML parsing + download JS.
+2. Stop parsing HTML + executing JS.
+3. Start parsing HTML.
+
+#### defer
+Browser downloads JS in parallel while HTML renders,then defer execution of JS until HTML renders in complete.
+
+1. HTML parsing + download JS.
+2. When HTMl parsing complete then at last start execuiting Js.
+
+Async/defer is the standard way to load js today.
+Only use render  blocking when you have a specific reason.Loading JS in the footer is now an anti-pattern.
+
+
 
 
 
