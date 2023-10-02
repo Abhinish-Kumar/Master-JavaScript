@@ -264,6 +264,7 @@ console.log(person["1"]);//first
 ```
 
 
+#### Object methods
 
 
 
