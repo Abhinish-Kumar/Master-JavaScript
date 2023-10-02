@@ -65,6 +65,13 @@ Npm,Web Pack,Gulp are help applications.
 4. The browser console
 
 
+#### ESlint and Prettier
+Install both on vscode
+
+1. Eslint:- Helps automatically detect coding errors and can do basic cleanup automatically.
+2. Prettier:- helps automatically cleanup your formatting.
+Both require Node.js,>Run npm install in terminal of vscode.
+file>prefferences>setting>search formatonsave>tick it.
 
 
 
