@@ -73,8 +73,32 @@ Install both on vscode
 Both require Node.js,>Run npm install in terminal of vscode.
 file>prefferences>setting>search formatonsave>tick it.
 
+#### Js basics
+1. Use comments to describe your code 
+```javascript
 
+//Single line comment
+/*
+Multiline comment
+*/
 
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+```
+
+2. Define a functon and variable at top 
+3. Use double or single quatation for string.
+4. Semicolons are not required.
+5. Check Tab size in vscode bottom ribbon.
+6. Use white space to make your code more redable browser dont have any issiue with white spaces.
+7. Comments are also used in debugging.
+8. Select code press CTRL + / (for comment).
 
 
 
