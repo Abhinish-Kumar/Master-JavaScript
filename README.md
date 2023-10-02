@@ -133,6 +133,38 @@ Only use render  blocking when you have a specific reason.Loading JS in the foot
 
 
 
+### Javascript Modules
+Js modules allows us to break pieces of code from a javascript file and place it into separate file and then import them back into the original file again.
+
+```javascript
+import person from "./info.js";
+console.log(person);
+```
+```javascript
+//info.js
+
+const person={
+//person information
+};
+
+export default person;
+```
+You can not get person object in console because person object is only available for that info.js file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
