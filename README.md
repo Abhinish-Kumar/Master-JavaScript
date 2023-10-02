@@ -310,7 +310,67 @@ console.log(car.name)//BMW
 The value is changed only on the user browser at that moment.It is used to control somethin like in game to move front and back by pressing keys.
 Example2.
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #box {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
 
+```
+
+```javascript
+// Select the box element
+var box = document.getElementById("box");
+var width = 0;
+var height = 0;
+
+// Add an event listener to the document object
+document.addEventListener("keydown", function (event) {
+          console.log(event);
+  // Check if the right arrow key was pressed
+  if (event.keyCode == 39) {
+    // Change the background color of the box
+    // Increment the margin value by 100
+    width += 100;
+    // Set the new margin value to the box element
+    box.style.width = width + "px";
+  }
+  if (event.keyCode == 37) {
+    // Change the background color of the box
+
+    
+  
+    // Increment the margin value by 100
+    height += 100;
+    // Set the new margin value to the box element
+    box.style.height = height + "px";
+  }
+});
+
+```
 
 
 
