@@ -499,6 +499,70 @@ import Person from "./class.js";
 
 
 
+### Object Constructor function
+
+1. There another short or less advance way for doing the same thing like a class.
+2. Its "object constructor function".
+3. Like class object constructor function uses a capitalized name.
+4. It produces the new object by capturing the property of newly created objects.
+
+
+Example1
+
+```javascript
+// constructor function
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// create two objects
+var person1 = new Person("Alice", "Smith", 25, "blue");
+var person2 = new Person("Bob", "Jones", 30, "brown");
+
+// access properties
+console.log(person1.firstName); // Alice
+console.log(person2.lastName); // Jones
+
+```
+
+Example2.
+
+```javascript
+// constructor function
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = "English"; // add a property
+  this.name = function() { // add a method
+    return this.firstName + " " + this.lastName;
+  };
+}
+
+// create two objects
+var person1 = new Person("Alice", "Smith", 25, "blue");
+var person2 = new Person("Bob", "Jones", 30, "brown");
+
+// access properties and methods
+console.log(person1.nationality); // English
+console.log(person2.name()); // Bob Jones
+
+```
+
+#### What is the difference between class and constructor function
+
+1. Class is a newer syntax introduced in ES2015, while constructor function is an older syntax that has been available since the beginning of JavaScript.
+2. Methods are defined separately in the class but in object constructor function methods are defined with this keyword.
+
+### Similarties
+
+1. Both class and constructor function can be used to create multiple objects with the same properties and methods.
+2. Both class and constructor function can use the new keyword to invoke them and create object instances.
+
 
 
 
