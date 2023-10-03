@@ -564,6 +564,110 @@ console.log(person2.name()); // Bob Jones
 2. Both class and constructor function can use the new keyword to invoke them and create object instances.
 
 
+```javascript
+// class syntax
+class Animal {
+  // constructor method
+  constructor(name, type, sound) {
+    this.name = name; // instance property
+    this.type = type; // instance property
+    this.sound = sound; // instance property
+  }
+
+  // instance method
+  makeSound() {
+    console.log(this.name + " says " + this.sound);
+  }
+
+  // static method
+  static isAnimal(obj) {
+    return obj instanceof Animal;
+  }
+}
+
+// create two objects using class
+var dog = new Animal("Rex", "dog", "woof");
+var cat = new Animal("Luna", "cat", "meow");
+
+// access properties and methods using class
+console.log(dog.name); // Rex
+console.log(cat.type); // cat
+dog.makeSound(); // Rex says woof
+cat.makeSound(); // Luna says meow
+console.log(Animal.isAnimal(dog)); // true
+console.log(Animal.isAnimal(cat)); // true
+
+// constructor function syntax
+function Animal(name, type, sound) {
+  this.name = name; // instance property
+  this.type = type; // instance property
+  this.sound = sound; // instance property
+
+  // instance method
+  this.makeSound = function() {
+    console.log(this.name + " says " + this.sound);
+  };
+}
+
+// static method
+Animal.isAnimal = function(obj) {
+  return obj instanceof Animal;
+};
+
+// create two objects using constructor function
+var dog = new Animal("Rex", "dog", "woof");
+var cat = new Animal("Luna", "cat", "meow");
+
+// access properties and methods using constructor function
+console.log(dog.name); // Rex
+console.log(cat.type); // cat
+dog.makeSound(); // Rex says woof
+cat.makeSound(); // Luna says meow
+console.log(Animal.isAnimal(dog)); // true
+console.log(Animal.isAnimal(cat)); // true
+
+```
+
+### Global Objects (defined in browser)
+
+#### Date Object 
+
+```javascript
+const rightNow = new Date();
+
+console.log(rightNow);//Tue Oct 03 2023 11:26:08 GMT+0530 (India Standard Time)
+
+console.log(rightNow.toDateString());//Tue Oct 03 2023
+//Date is a object created with a constructor function and .toDateString() is a method defined in it?
+
+```
+
+### Template Literals
+
+to inject new html in to the HTMl we need to get an element from the HTML then we are able to inject in it.
+Entire document is an object in browser.
+
+```javascript
+console.log(typeof document)//object
+```
+When a browser renders a document it creates a document object model of that document.So that we can access DOM using Javascript.
+
+```javascript
+
+let a="world";
+
+document.body.innerHtml=`hello ${a}`;
+//change the body content
+```
+Backticks tells the browser that anything inside me is HTML or Javascript.
+
+#### HTML expression + JS expression = Template.
+
+Js expression is written inside dollorsign with curly brackets (${js}) .By doing this you only have to make changes in js and is reflected into HTML DOM directly.
+
+
+
+
 
 
 
