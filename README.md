@@ -679,6 +679,9 @@ document.body.innerHTML='<h1>Abhinish' + a + '</h1>';
 
 
 
+# DOM
+
+
 
 
 
