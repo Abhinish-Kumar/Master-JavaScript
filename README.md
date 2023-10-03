@@ -666,8 +666,16 @@ Backticks tells the browser that anything inside me is HTML or Javascript.
 Js expression is written inside dollorsign with curly brackets (${js}) .By doing this you only have to make changes in js and is reflected into HTML DOM directly.
 
 
+### Before template literal 
 
+We can also do the same thing with using simple string but it makes the things much more complicated so that Template literals comes in existance.
 
+```javascript
+
+let a="kumar";
+
+document.body.innerHTML='<h1>Abhinish' + a + '</h1>';
+```
 
 
 
