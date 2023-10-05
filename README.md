@@ -681,6 +681,114 @@ document.body.innerHTML='<h1>Abhinish' + a + '</h1>';
 
 # DOM
 
+DOM stands for Document Object Model. It is a way of representing a web page as a tree of objects that can be accessed and modified by a programming language like JavaScript. For example, you can use JavaScript to change the text, color, style, or position of any element on the web page by using the DOM.
+
+DOM describes the herarchical model in the document.
+
+#### 1. Accessing elements with querySelector method
+
+The queryselector and queryselectorAll both take a css query as the parameter it puts in quataition mark.
+
+```javascript
+//1 Select element main
+document.querySelector('main');
+//<main>…</main>
+
+
+//2 Select h1 inside main
+document.querySelector('main h1');
+//<h1>Hello my name is abhinish kumar and i am from ludhiana</h1>
+
+
+//3 Select last element of the list
+document.querySelector('main ul li:last-child');
+//<li>"hello 5"</li>
+
+
+//4 Select all the list item (NodeList)
+ document.querySelectorAll('main ul li');
+//NodeList(5) [li, li, li, li, li]
+```
+
+
+Change the color of all the lsit 
+
+```javascript
+//1 Select all the list item and change the color of all the list item red and lst item with blue
+
+    let nodeList = document.querySelectorAll('main ul li');
+
+              nodeList.forEach(li=>{
+                    li.style.color="red";
+                              li=nodeList[nodeList.length-1];
+                              li.style.color="blue"
+              })
+
+```
+
+#### Modify element classes (single class name)
+
+```javascript
+//1 If element contain single class name(get class name)
+ document.querySelector('h1').className;
+//'heading'
+
+
+//2 Change class name
+document.querySelector('h1').className="updatedh1"
+//"updatedh1"
+document.querySelector('h1').className;
+//"updatedh1"
+```
+
+#### Modify element classes (multiple class name)
+
+```javascript
+//1 spani has 3 classes (get all the classses)
+document.querySelector('span').classList;
+//DOMTokenList(3) ['first', 'second', 'third', value: 'first second third']
+
+
+//2 Add new class
+document.querySelector('span').classList.add("iamnew");
+//undefined
+document.querySelector('span').classList
+//DOMTokenList(4) ['first', 'second', 'third', 'iamnew', value: 'first second third iamnew']
+
+//3 Remove a class
+document.querySelector('span').classList.remove("first");
+//undefined
+document.querySelector('span').classList
+//DOMTokenList(2) ['second', 'third', value: 'second third']
+
+//4 Toggle class name
+ document.querySelector('span').classList.toggle("switch");
+//false
+    document.querySelector('span').classList.toggle("switch");
+//true
+    document.querySelector('span').classList.toggle("switch");
+//false
+    document.querySelector('span').classList.toggle("switch");
+//true
+
+
+
+// 5 Replace a class name
+document.querySelector('span').classList.replace("third","newThirs");
+//false
+document.querySelector('span').classList
+//DOMTokenList(3) ['first', 'second', 'newThirs', value: 'first second newThirs']
+```
+
+#### Handle Attributes
+
+
+
+
+
+
+
+
 
 
 
