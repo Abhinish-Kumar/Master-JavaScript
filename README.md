@@ -781,11 +781,85 @@ document.querySelector('span').classList
 ```
 
 #### Handle Attributes
+Anything inside a tag is called Attribute.
+
+```javascript
+//1 get all the attributes of a element
+document.querySelector('img').attributes;
+//NamedNodeMap {0: src, 1: alt, src: src, alt: alt, length: 2}
+
+//2 Check element has attribute or not
+document.querySelector('img').hasAttribute('src');
+//true
+
+
+//3 Get attribute value
+document.querySelector('img').getAttribute('src');
+//'img.png'
+
+
+//4 Set a new attribute
+document.querySelector('img').setAttribute("alt","newSet");
+//undefined
+document.querySelector('img')
+//<img src=​"img.png" alt=​"newSet">​
+
+
+//5 remove any attribute
+document.querySelector("img");
+//<img src=​"img.png" alt=​"newSetttttttt">​
+document.querySelector("img").removeAttribute("alt");
+//undefined
+document.querySelector("img");
+//<img src=​"img.png">​
+```
+You can also set the class as attribute and id ass well.
+
+#### Inline Styling
+
+```javascript
+//1 get all styles of p
+document.querySelector("p").style
+//CSSStyleDeclaration {0: 'color', 1: 'background-color', accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}
 
 
 
+//2 get a specific style of an element
+document.querySelector("p").style.color;
+//'red'
 
 
+
+//3 Change a specific style
+document.querySelector("p").style.color="blue";
+
+```
+
+Insted of hyphen we use camelcase for css elements
+
+#### appending elements in DOM
+
+```javascript
+//1 Append at last
+ let a=document.createElement('h1');
+          a.innerHTML=`<h1>Hello</h1>`;
+          
+      document.querySelector("main").append(a);
+
+//2 Append at beginning
+ let a=document.createElement('h1');
+          a.innerHTML=`<h1>Hello</h1>`;
+          
+      document.querySelector("main").prepend(a);
+```
+
+Apppend child is also common thing but it return the element.
+
+Try it
+
+1. replaceChild.
+2. insertBefore.
+3. insertAdjacentElement.
 
 
 
