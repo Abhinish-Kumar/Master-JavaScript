@@ -1556,6 +1556,56 @@ Http is also used to get the video,audio and ajax to update our html page.
 
 your http request goes to the server and ask to the server to give you required file and if file not exist it will show you the http status 440 not found.
 
+## GET 
+
+```html
+<form method="GET">
+<register>Register now</register>
+</form>
+```
+
+Open the netword tool in devtoolbar.
+If you click the resiger button it will modify the link (?ada?adsa?adsasd?Adas) this is called a query string .it is the first way of sending the data to the server.
+The query string contains the (key value pair).
+
+##### its not secure your passord is open for every one.(send the data through header)
+
+The second way of sending the data to server is through body.
+
+## POST request
+
+```html
+<form method="POST">
+<register>Register now</register>
+</form>
+```
+
+It does not create a query string on the link.
+It store the form data.
+
+### The password was visible on both the cases ?
+
+Think a person watching our communication it will get our password from query string.
+And if we send the data through body 
+The hacker find the way to get your request to him first.See your password in the body of the form.
+
+
+## Use HTTPS to secure your data from hackers..
+
+HTTPS means hypertext transfer protocol secure.The communication from server to browser is now encrypted.It means that only server and client has the key to open or to read this message.
+
+
+The s in https uses a layer called transport security layer(secure socket layer) TSL and SSl for short.
+By using https even a third person get the request but he does not read this Because the password is now not in redable form.
+
+## NOTE when you are login into the account chect the https first.
+
+Summary ,Your browser is a http client sending a request to the server machine.
+When a client clicks to a hyper link the browser builts an http request and sends it to the server to communicate now the server gives us the data as a response.
+
+
+
+
 
 
 
