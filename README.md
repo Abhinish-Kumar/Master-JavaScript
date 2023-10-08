@@ -1646,5 +1646,77 @@ JSON is text and we can conver any javascript object to json and send json to th
 
 
 
+# AJAX 
+
+Onevery time we make a request our page refresh ever for json request.
+
+If you want to request any thing your whole page reload on every request.
+It causes a poor user experience.
+
+We have AJAX that loads the data without disturbing the other part of your web page or without reloding.
+
+
+#### what is AJAX 
+Its a technology to combine pieces together,Its calles xml http request.
+
+1. it was very complecated before.
+2. its complexicity was handled by jquery thats why jquery was very famus.
+3. Now we have a FETCH in javascript for ajax call.
+
+```javascript
+fetch('/my/url').then(response=>{
+console.log(response);
+});
+
+```
+
+fetch does http for us.
+
+
+Summry,when a event occur on a web page to login we send our detail to server and server responses that you are loged in and all these happen without refreshing the page with AJAX ,ajax is used to create a single page application.In SPA our page holds only required data and if we request to the new data AJAX vanish the previous data and rebuild that part with new data.
+
+
+#### example
+
+```javascript
+//fetch is a window object
+//fetch is a api
+fetch('https://jsonplaceholder.typicode.com/users')
+.then(response=>response.json())
+.then(user=>console.log(user));
+```
+
+
+```javascript
+//console
+fetch('https://jsonplaceholder.typicode.com/users')
+//promise
+fetch('https://jsonplaceholder.typicode.com/users')
+.then(response=>console.log(response));
+//fullfill
+```
+Fetch comes with their own .json() method to convert response formet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
