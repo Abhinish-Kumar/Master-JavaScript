@@ -1605,12 +1605,44 @@ When a client clicks to a hyper link the browser builts an http request and send
 
 
 
+# JSON
+
+We can not send any type of data to server to communicate ,it can only be text.
+We cant not send a javascript object.
+JS object is very confusing for the errver because the server can be written in to java,php or in other language but string is understandable for every languages.
+
+1. JSON stands for javascript object notation.
+2. JSON is a syntax for storing and exchanging data.
+3. JSON is text,written with javascript object notation.
 
 
+THERe is also another form XML.
+Both XML and JSON use to transfer the data over  the server.
 
+JSON uses object like syntax.and XML uses html like syntax.
 
+1. To send the data to the server we have to sonver our data in to JSON formet.and the server changes it to their own language to understand.
+2. And server then changes the request data to the JSON and send back to you.
+3. And to read the responsive you have to change the formed again.
 
+## JSON in javascript
 
+Javascript comes with its own json functions to deal with json formet.
+
+```javascript
+//json to object
+//1. JSON.parse() 
+
+var obj=JSON.parse('{"name":"john","age":30}');
+
+//object to json
+//2. JSON.stringify()
+
+var myJSON = JSON.stringify(obj);
+
+```
+
+JSON is text and we can conver any javascript object to json and send json to the server.we can also conver any type of json data of server into a object.
 
 
 
