@@ -1519,6 +1519,49 @@ console.log(splitEmil())
 
 
 
+# Asynchronous Javascript
+
+Tim Berners-Lee is the inventor of the World Wide Web, which is a system of interlinked hypertext documents that can be accessed via the Internet. He created the first web browser, web server, HTML, URL, and HTTP in the late 1980s and early 1990s while working at CERN, a European research organization. He also founded and directed the World Wide Web Consortium (W3C), which oversees the standards and development of the Web. He is a professor at the University of Oxford and MIT, and a recipient of many awards and honors for his invention1
+
+
+1. Sir Tim Berners-Lee invented the WWW in 1989.
+
+2. All the internet is just a web of wires and wires has no any knowledge where to transfer the data.
+3. So we need a protocol ,Its like a standard that every one follows.
+4. HTTP is a protocol that allows the fetching of resources such as HTML document(thats why it is called as hypertext transfer protocol)
+5. By the ombination of http and html we have www.
+6. HTTP are the protocols or the rules that we use over the wire.
+7. HTTP is the foundation of any data exchange on the web.
+8. HTTP is a common language that a client and a server use to communicate.(we say to server can you give me this file server responses with that file).Because thy both understand their languanges.
+9. The message send by the browser is called as request and the messages send by the server is called as response.
+
+#### HTTP 
+
+This language has only little words to communicate with the server 
+
+1. GET:used to get the file from the server.
+2. POST:you post something in the server.
+3. PUT:used to ipdate the data on the server.
+4. Delete:used to delete a piece of data on the server.
+
+example like in twitter get is used to get the twitter feed ,post is used to post your data or new user id to the server.put is used used to edit your tweet.Delete is used to delete your user account or a tweet.
+
+Http is also used to get the video,audio and ajax to update our html page.
+
+#### HTTP messages
+
+1. 200 :successful.
+2. 400 :not found.
+3. 500 : server error.
+
+your http request goes to the server and ask to the server to give you required file and if file not exist it will show you the http status 440 not found.
+
+
+
+
+
+
+
 
 
 
