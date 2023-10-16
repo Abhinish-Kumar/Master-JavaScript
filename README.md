@@ -862,6 +862,25 @@ Try it
 3. insertAdjacentElement.
 
 
+## Variables
+
+#### Variables containers.
+
+Being able to name things is crutial for communication.
+In our code we have bunch of object.
+Name is used to create a vertual container to put the object within.
+In js we can put any data type to this containers.
+Single equalto means the object we have on the RHS we have to put it in the container that we have on LHS.
+
+#### Q.Why we have different type of variables?
+
+
+
+
+
+
+
+
 
 
 
