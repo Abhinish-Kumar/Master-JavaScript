@@ -1861,7 +1861,7 @@ This way, if any of the Promises in the chain are rejected, the catch handler wi
 
 You can also handle errors at any point in the chain by adding a second argument to the .then() method. This argument is a function that receives the error from the previous operation and returns a new Promise. This way, you can recover from some errors and continue with the chain2.
 
-#### What is the difference between Promise.resolve() and Promise.reject()?
+#### Q7.What is the difference between Promise.resolve() and Promise.reject()?
 Promise.resolve() returns a Promise that is already resolved with a value, while Promise.reject() returns a Promise that is already rejected with an error.
 
 ```javascript
@@ -1870,7 +1870,35 @@ Promise.resolve() returns a Promise that is already resolved with a value, while
 // A promise that is rejected with the error “Something went wrong” let promiseB = Promise.reject(new Error(“Something went wrong”));
 ```
 
-###### more 
+#### Q8.What is the purpose of the Promise.all() method?
+The Promise.all() method takes an array of Promises and returns a new Promise that resolves when all of the input Promises have resolved.
+
+```javascript
+// Create three promises that resolve after different delays let promise1 = new Promise((resolve, reject) => { setTimeout(() => { resolve(“First”); }, 1000); });
+
+let promise2 = new Promise((resolve, reject) => { setTimeout(() => { resolve(“Second”); }, 2000); });
+
+let promise3 = new Promise((resolve, reject) => { setTimeout(() => { resolve(“Third”); }, 3000); });
+
+// Use Promise.all() to wait for all of them to finish Promise.all([promise1, promise2, promise3]).then((values) => { // This will run after all promises resolve console.log(values); // [“First”, “Second”, “Third”] }).catch((error) => { // This will run if any promise rejects console.error(error); });
+```
+
+```javascript
+let urls=[
+    "https://jsonplaceholder.typicode.com/users",
+    "https://jsonplaceholder.typicode.com/photos",
+    "https://jsonplaceholder.typicode.com/albums"    ];
+    
+   Promise.all(urls.map(url=>{
+    return fetch(url).then(resp=>resp.json())
+})).then(result=>{
+    console.log(result[0]);
+    console.log(result[1]);
+    console.log(result[2]);
+}) // Add this parenthesis
+```
+
+[More]("https://testbook.com/interview/javascript-promise-interview-questions")
 
 
 
