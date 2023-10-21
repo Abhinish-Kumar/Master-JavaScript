@@ -1898,7 +1898,7 @@ let urls=[
 }) // Add this parenthesis
 ```
 
-[More]("https://testbook.com/interview/javascript-promise-interview-questions")
+[More](https://testbook.com/interview/javascript-promise-interview-questions)
 
 
 
