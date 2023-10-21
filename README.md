@@ -1717,7 +1717,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
 Fetch comes with their own .json() method to convert response formet.
 
 
-
+# Promises (ES6)
+Promises are new features in javascript 
 
 
 
