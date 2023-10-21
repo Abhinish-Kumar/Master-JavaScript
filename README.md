@@ -1718,9 +1718,159 @@ Fetch comes with their own .json() method to convert response formet.
 
 
 # Promises (ES6)
-Promises are new features in javascript 
+Promises are new features in javascript.
+
+#### Q1.What is a Promise in JavaScript?
+Ans:- A promise is an object that may produce a single value some time in the future.
+Either a resolved value or a reason that its not resolved(rejected).
+
+more:::A promise is a way of handling asynchronous operations in JavaScript, which means operations that take some time to complete and may not have a fixed outcome. For example, you can use a promise to request some data from a server, and then do something with the data when it arrives.
+
+#### Q2.What are the states of a Promise?
+Ans:-A Promise can be in one of three states: pending, fulfilled, or rejected.
+
+#### Q3.How do you create a Promise in JavaScript?
+Ans:-You can create a Promise using the Promise constructor, which takes a single function (known as the executor function) and it defines what the promise will do and how it will resolve or reject. 
+
+more::::The executor function has two parameters: resolve and reject. These are also functions that you can call inside the executor function to indicate the outcome of the promise. If the promise is successful, you call resolve with the value that you want to return from the promise. If the promise fails, you call reject with the reason for the failure.
 
 
+```javascript
+//Promise constructor
+// create a new promise
+let coinToss = new Promise(function(resolve, reject) {
+  // simulate a coin toss with a random number
+  let randomNumber = Math.random();
+  // if the number is greater than 0.5, resolve with "Heads"
+  if (randomNumber > 0.5) {
+    resolve("Heads");
+  }
+  // otherwise, reject with "Tails"
+  else {
+    reject("Tails");
+  }
+});
+
+```
+
+##### Explain the code 
+In this example, we create a new promise called coinToss that uses the Promise constructor with an executor function. Inside the executor function, we generate a random number between 0 and 1 using Math.random(). If the number is greater than 0.5, we call resolve with the value “Heads”. Otherwise, we call reject with the value “Tails”.
+This promise will either resolve with “Heads” or reject with “Tails” depending on the random number. To use the value or the reason of the promise, we need to attach handlers to it using the .then() and .catch() methods. For example:
+
+```javascript
+// use the coinToss promise
+coinToss
+  // attach a handler for success
+  .then(function(value) {
+    // log the value of the promise
+    console.log("The coin landed on " + value);
+  })
+  // attach a handler for failure
+  .catch(function(reason) {
+    // log the reason of the promise
+    console.log("The coin landed on " + reason);
+  });
+
+```
+
+##### Explain the code 
+In this example, we use the coinToss promise and attach two handlers to it using .then() and .catch(). The .then() method takes a function that will be called if the promise resolves, and receives the value of the promise as an argument. The .catch() method takes a function that will be called if the promise rejects, and receives the reason of the promise as an argument.
+
+The output of this code will be either “The coin landed on Heads” or “The coin landed on Tails” depending on the random number.
+
+#### Q4.How do you handle the result of a Promise?
+Ans:-You can use the .then() method to handle the successful resolution of a Promise and the .catch() method to handle any errors that occur.
+
+#### Q5.How do you chain multiple Promises together?
+You can chain Promises together using the .then() method, which returns a new Promise that resolves to the value returned by the callback function.
+###### more
+To chain multiple promises together, you can use the .then() method of the promise object. The .then() method takes a function as an argument, which will be called when the promise is resolved. The function can return another promise, which will be passed to the next .then() method in the chain. This way, you can perform multiple asynchronous operations in a sequence, where the output of one operation is used as the input for the next operation.
+
+For example, suppose you want to fetch some data from a server, and then use that data to fetch some more data from another server. You can use promise chaining to do that:
+
+```javascript
+// create a promise to fetch data from server A
+let promiseA = fetch('https://serverA.com/data.json');
+
+// chain a .then() method to handle the response
+promiseA.then(function(response) {
+  // convert the response to JSON and return another promise
+  return response.json();
+})
+// chain another .then() method to handle the JSON data
+.then(function(data) {
+  // use the data to fetch data from server B and return another promise
+  return fetch('https://serverB.com/data/' + data.id);
+})
+// chain another .then() method to handle the response from server B
+.then(function(response) {
+  // convert the response to JSON and return another promise
+  return response.json();
+})
+// chain another .then() method to handle the JSON data from server B
+.then(function(data) {
+  // use the data to do something else
+  console.log(data);
+});
+
+```
+##### Explain code 
+n this example, we create a promise to fetch data from server A, and then chain four .then() methods to handle the responses and data. Each .then() method returns another promise, which is passed to the next .then() method in the chain. The final .then() method uses the data from server B to do something else.
+
+This way, we can perform multiple asynchronous operations in a sequence, using promise chaining. 
+
+
+#### Q6.How do you handle errors in a Promise chain?
+Ans:-You can use the .catch() method to handle errors that occur in a Promise chain.But it can catch the error only in the code that defines before it.In promise chaining.
+
+###### more 
+A Promise chain is a sequence of asynchronous operations that are linked by the .then() method. Each .then() method takes a function that receives the result of the previous operation and returns a new Promise. This way, you can perform multiple tasks one after another, using the output of one task as the input for the next one.
+
+For example, suppose you want to fetch some data from a server, parse it as JSON, and then display it on the web page. You can use a Promise chain like this:
+```javascript
+fetch('/data.json') // returns a Promise that resolves to a Response object
+  .then(response => response.json()) // returns a Promise that resolves to the parsed JSON data
+  .then(data => {
+    // do something with the data, such as displaying it on the web page
+    console.log(data);
+  });
+
+```
+However, sometimes things can go wrong in a Promise chain. For example, the server might be down, or the data might be invalid. In that case, you need to handle the errors gracefully and avoid crashing your program.
+
+To handle any errors that may occur in the chain, you can add a call to .catch() at the end of the chain. If any of the Promises are rejected, this catch handler will run, and the rest of the chain is skipped1.
+
+For example, suppose you want to handle any errors that might happen in the previous example. You can add a .catch() method like this:
+
+```javascript
+fetch('/data.json') // returns a Promise that resolves to a Response object
+  .then(response => response.json()) // returns a Promise that resolves to the parsed JSON data
+  .then(data => {
+    // do something with the data, such as displaying it on the web page
+    console.log(data);
+  })
+  .catch(error => {
+    // handle any errors that might occur in the chain
+    console.error(error);
+    alert('Something went wrong!');
+  });
+
+```
+
+This way, if any of the Promises in the chain are rejected, the catch handler will run and display an error message to the user.
+
+You can also handle errors at any point in the chain by adding a second argument to the .then() method. This argument is a function that receives the error from the previous operation and returns a new Promise. This way, you can recover from some errors and continue with the chain2.
+
+#### What is the difference between Promise.resolve() and Promise.reject()?
+Promise.resolve() returns a Promise that is already resolved with a value, while Promise.reject() returns a Promise that is already rejected with an error.
+
+```javascript
+// A promise that is resolved with the value 42 let promiseA = Promise.resolve(42);
+
+// A promise that is rejected with the error “Something went wrong” let promiseB = Promise.reject(new Error(“Something went wrong”));
+```
+
+###### more 
 
 
 
