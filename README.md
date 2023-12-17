@@ -1901,11 +1901,62 @@ let urls=[
 [More](https://testbook.com/interview/javascript-promise-interview-questions)
 
 
+# Fetch api 
+fetch api is a build in tool in browser used to fetch the data asynchronously from different netwirk requiest by using GET<POST<PUT 
+fetch api contain first argument a http link and second argument is type of request.
+
+
+```javascript
+
+console.log(fetch('https://reqres.in/api/users'));
+
+>>>Promise{pending}
+```
+
+Fetch is a promise based api 
 
 
 
+```javascript
+
+console.log(fetch('https://reqres.in/api/users'));
+.then(res => console.log(res));
+
+>>>>Response{data object}
+```
+We are not able to access the body of returned data by using Response,we have to convert it into JSON formet.
+
+```javascript
+
+console.log(fetch('https://reqres.in/api/users/1'));
+.then(res =>res.json())
+.then(data => console.log(data));
+
+>>>>{data object}
+```
+
+fetch will alwas succeed so to detect the uncessful we use
 
 
+```javascript
+
+fetch('https://reqres.in/api/users/1')
+.then(res =>{
+
+if(res.ok){
+console.log("SUccess");
+}else{
+console.log("Not Successful")
+}
+res.json()
+
+})
+.then(data => console.log(data));
+
+>>>>{data object}
+```
+
+Fetch is used to do some more operations with data,it can post the data delete the data from server and do a lot of things.
 
 
 
