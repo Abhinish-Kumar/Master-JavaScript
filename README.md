@@ -896,6 +896,41 @@ Single equalto means the object we have on the RHS we have to put it in the cont
 #### How to use and when to use.
 Arrays are like a block of container we can imagine it as a train with its boxes every box is connected with its corresponding box with serial number.In javascript we can put any type of value in arrays box or container eg:number,string,boolean,object or array.
 Arrays are object in javascript.
+
+## Update array 
+### How can you create an array in js
+
+```javascript
+//Arrays - Declaration
+let arr = ["apple","banana","cherry"];
+
+//Access array elements
+console.log(arr[0]);  //"apple"
+
+
+//It can accept any data type
+let obj={name:"piyush"};
+arr[3]=obj;
+console.log(arr[3]);//{name:"piyush"}
+console.log(arr[3].name);//"piyush"
+
+//We can also get the length of the array
+console.log(arr.length)//3
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## a.Array Methods
 Why array acctually do have methods?
 Methods are functions that we call on objects with dot notation.
