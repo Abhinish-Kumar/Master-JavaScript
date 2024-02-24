@@ -30,6 +30,86 @@ For so many browsers, the web developer had to write code that would support all
 
 
 
+# Brief intro to javascript?
+
+JavaScript was initially created to “make web pages alive”.
+
+The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads.
+
+Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.
+
+In this aspect, JavaScript is very different from another language called Java.
+
+But as it evolved, JavaScript became a fully independent language with its own specification called ECMAScript, and now it has no relation to Java at all.
+
+Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called the JavaScript engine.You can run javascript any where with javascript engine.
+
+The browser has an embedded engine sometimes called a “JavaScript virtual machine”.
+
+Different engines have different “codenames”. For example:
+
+V8 – in Chrome, Opera and Edge.
+SpiderMonkey – in Firefox.
+
+There are other codenames like “Chakra” for IE, “JavaScriptCore”, “Nitro” and “SquirrelFish” for Safari, etc.
+
+Javascript engine converts the javascript code to machine code to execute it fast.
+
+Javscript is able to do.
+
+1. Add new HTML to the page, change the existing content, modify styles.
+2. React to user actions, run on mouse clicks, pointer movements, key presses.
+3. Send requests over the network to remote servers, download and upload files (so-called AJAX and COMET technologies).
+4. Get and set cookies, ask questions to the visitor, show messages.
+5. Remember the data on the client-side (“local storage”).
+
+
+### Javascript can do only limited things in browser.
+1. JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
+2. Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like “dropping” a file into a browser window or selecting it via an <input> tag.
+3. There are ways to interact with the camera/microphone and other devices, but they require a user’s explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the NSA.
+4. Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other page if they come from different sites (from a different domain, protocol or port).
+5. This is called the “Same Origin Policy”. To work around that, both pages must agree for data exchange and must contain special JavaScript code that handles it. We’ll cover that in the tutorial.
+6. JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that’s a safety limitation.
+7. Such limitations do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugins/extensions which may ask for extended permissions.
+
+## What makes JavaScript unique?
+There are at least three great things about JavaScript:
+
+1. Full integration with HTML/CSS.
+2. Simple things are done simply.
+3. Supported by all major browsers and enabled by default.
+
+JavaScript is the only browser technology that combines these three things.
+
+## Languages “over” JavaScript
+
+The syntax of JavaScript does not suit everyone’s needs. Different people want different features.
+
+That’s to be expected, because projects and requirements are different for everyone.
+
+So, recently a plethora of new languages appeared, which are transpiled (converted) to JavaScript before they run in the browser.
+
+Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and auto-converting it “under the hood”.
+
+Examples of such languages:
+
+1. CoffeeScript is “syntactic sugar” for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
+2. TypeScript is concentrated on adding “strict data typing” to simplify the development and support of complex systems. It is developed by Microsoft.
+3. Flow also adds data typing, but in a different way. Developed by Facebook.
+4. Dart is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+5. Brython is a Python transpiler to JavaScript that enables the writing of applications in pure Python without JavaScript.
+6. Kotlin is a modern, concise and safe programming language that can target the browser or Node.
+
+## Summary
+
+1. JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
+2. Today, JavaScript has a unique position as the most widely-adopted browser language, fully integrated with HTML/CSS.
+3. There are many languages that get “transpiled” to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+
+
+
+
 
 
 
