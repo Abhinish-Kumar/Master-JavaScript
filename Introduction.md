@@ -140,6 +140,21 @@ It is originally designed as a client-side scripting language to enhance web pag
 
 Js can interact with dom to modify the content of the webpage also with conditions and used to style pages dynamically.
 
+Javascript is a programming language used at both client and server side applications.
+
+Javascript is the language that browser understand natively.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
