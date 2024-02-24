@@ -142,7 +142,7 @@ Js can interact with dom to modify the content of the webpage also with conditio
 
 Javascript is a programming language used at both client and server side applications.
 
-Javascript is the language that browser understand natively.
+Javascript is the language that browser understand natively. With first-class functions means we can use js functions as a variable.ANd folly a declarative style. Every thing in javascript is object and it follow eval function.
 
 
 
