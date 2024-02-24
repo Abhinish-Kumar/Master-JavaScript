@@ -1,3 +1,41 @@
+
+# Internet before web browser
+
+We know that without browser we can not use the internet. Lets see how was the world without browser. 
+
+
+Before web browsers were invented, the internet was a network primarily used by researchers and scientists to share information.
+
+1. Early days:- The internet began as a project called ARPANET in 1969, funded by the U.S. Defense Department. It was a network of computers able to communicate with each other.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Story of JavaScript 
 <img src="https://th.bing.com/th/id/OIP.DpeuhHbnB6m2uE2A5UTpBAHaFj?w=240&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" width="200px">
 Brendan Eich: -The developer of JavaScript.
