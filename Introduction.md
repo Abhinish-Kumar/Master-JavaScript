@@ -124,6 +124,16 @@ Its well known for building frontend web applicaions because its only language o
 Its an interpred language but tools like V8 engine and chromium uses a JIT compiler to convert ot to machine code at run time.
 
 
+# Javascript language
+
+1. Interpreted
+2. c-styleSyntax
+3. Dynamic Typing
+4. Object-Oriented
+5. Prototype-bases
+6. Functions
+7. Single-Threaded
+
 
 
 
