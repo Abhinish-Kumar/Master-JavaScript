@@ -101,12 +101,27 @@ Examples of such languages:
 5. Brython is a Python transpiler to JavaScript that enables the writing of applications in pure Python without JavaScript.
 6. Kotlin is a modern, concise and safe programming language that can target the browser or Node.
 
+
+
 ## Summary
 
 1. JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
 2. Today, JavaScript has a unique position as the most widely-adopted browser language, fully integrated with HTML/CSS.
 3. There are many languages that get “transpiled” to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
 
+
+# Defination
+
+Js is a high-level,single-threaded garbage collected interpreted or jist in time compiled,prototype-based, multiparadigm dynamic language with a non blocking event loop made famus for building websites it was created in 1995 in just one week by brenden eich with the goal of adding an easy to learn scripting language to netscape browser it was originally named Mocha but the genius marketing people of the time wanted it to sound like that sexy new java language today its a fully featured language that contains to evolve through the Ecma-script standards. 
+
+1. Mocha
+2. Es3
+3. Es5
+4. Es6
+5. Ts
+
+Its well known for building frontend web applicaions because its only language other than web-assembly that is nativelly supported in browsers however.
+Its an interpred language but tools like V8 engine and chromium uses a JIT compiler to convert ot to machine code at run time.
 
 
 
