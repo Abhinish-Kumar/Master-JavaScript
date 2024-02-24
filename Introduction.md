@@ -135,6 +135,10 @@ Its an interpred language but tools like V8 engine and chromium uses a JIT compi
 7. Single-Threaded
 
 
+It is originally designed as a client-side scripting language to enhance web pages with interactivity and dynamic content. But now it becomes a versetile language thats why it is also used for server-side development.
+
+
+Js can interact with dom to modify the content of the webpage also with conditions and used to style pages dynamically.
 
 
 
