@@ -6,7 +6,31 @@ We know that without browser we can not use the internet. Lets see how was the w
 
 Before web browsers were invented, the internet was a network primarily used by researchers and scientists to share information.
 
-1. Early days:- The internet began as a project called ARPANET in 1969, funded by the U.S. Defense Department. It was a network of computers able to communicate with each other.
+1. Early days:- The internet began as a project called ARPANET in 1969, funded by the U.S. Defense Department. It was a network of computers able to communicate with each other==>
+
+Now we are able to transmit the information without transmitting material with the help of netwok of computer we can share information which are connected to each other with wire.
+
+
+1916 is the year that changes the life of computer science and communication.
+The Advance research project agency or ARPA a branch of the american militry created the (ARPA) a secure and fast computer networking system to communicate from a distance of kms. 
+
+
+### And the internet was Born (the creation of ARPANET) 
+
+The first settelite was send to the orbit by the humans launched by the Sobia union in 1957 during the height of the cold war created  a turning point to the world. The American government lead by the president realised that the United state of america leaded the brench of militory, divide them to develop the new technology  for the protection of US.
+
+### The ARPA was born 
+The main focus of the ARPA is at computers those used by the governments for basic computations  as earlier 1939 In 1961 a scientist and engineer lenar climrock  a professor in computer science department in BOELTERS HALL-UCLA Publish a idea of packets. Smaller and fix length of information this pieces can be send down between different paths in different time. ALlowing larger pieces of information of document safely and securly.
+
+JCR licclider a computer science and engineer working at ARPA was the first person to develop the idea that the computers could be used for communication.(The Computer as COmmunication Device) 
+
+This design is in such a way that if a single connection is removed from the network the computers can communicate with second path to protect it from atomic blasts. 
+
+On this concept the construction of network is started that connect all the computers in such a that if a single node is not working it can not effect the communication of other node. BBN also decided that each  computer would be connected an IMP I(nterface Message Processor) this would be able to communicate with the other IMPs of other computer.
+
+In 1969 the first IMP send from both boromic and numan it is considered as the first site. The IMP was connected to the host computers. 
+ The first email is send by 1971 and first internation connection was added to the network at 1973 placed by the university of london in UK. At last brendian eich created a platform to allow the world to communicate with world wide web.The first internet web browser was MOSAC created by brendeneich. It is used by general population. In 2004 a social webite MYSPACE.com was officially launch Changes the way people interect with the computers. and markjukerberg created fb by the inspiration of this and after that twitter becme famus. 
+ Arpanet was the turning point of the world of computer. 
 
 
 
