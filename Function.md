@@ -551,5 +551,89 @@ delayedGreeting('Alice'); // Outputs: "Hello, Alice!" after 1 second
 
 ```
 
+## 6. Callback function
+
+Call me back some point of time.
+
+
+In javascript function is `1st class citizen` , means we can create a function, we can assign a funcion to variable,  we can pass functin as parameter. 
+
+```javascript
+
+function foo(bar){
+bar(); /callback
+}
+
+foo(function(){
+console.log("bar"); //anonymus function (function without name)
+});
+
+foo(function(){
+console.log("this is another bar"); //anonymus function (function without name)
+});
+
+```
+
+The function that we pass as a argument to another function and use that funcion then that function is called as `callback` function. 
+
+```javascript
+//two condition to call bar
+
+function foo(bar){
+if(isNight){
+bar();
+}
+if(isDrinkOverCheck Online){
+bar(); //calling it back at certain condition
+}
+}
+```
+
+Its so powerful because you can use any function to pass as argument and can call it back at any condition.
+
+Eg:- pizza hub. order pizza.
+
+
+## 6. Higher Order Function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
