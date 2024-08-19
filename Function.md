@@ -488,11 +488,68 @@ const outerReturn = outer(10);
 ```
 it is used to preserver the variable of outer function.
 
+
+### What is a Closure?
+A closure in JavaScript is a feature where an inner function has access to the outer (enclosing) function's variables and parameters even after the outer function has returned. In simpler terms, a closure allows a function to remember and access its lexical scope even when it's executed outside its original scope.
+
+### Real-World Analogy
+Think of a closure like a backpack. When you go hiking (execute a function), you pack some supplies (variables) in your backpack. Even after you leave your house (the outer function finishes executing), you still have access to the supplies in your backpack (the inner function retains access to the outer function's variables).
+
+
+### Why are Closures Useful?
+Closures are powerful because they allow for:
+
+1. Data Privacy: You can create private variables that can only be accessed by specific functions.
+2. Stateful Functions: Functions can maintain state between executions.
+3. Function Factories: You can create functions that generate other customized functions.
+
+
+eg:- 
+```javascript
+function greeting(name) {
+    return function(message) {
+        console.log(`${message}, ${name}!`);
+    };
+}
+
+const greetJohn = greeting('John');
+greetJohn('Hello'); // Outputs: "Hello, John!"
+greetJohn('Good morning'); // Outputs: "Good morning, John!"
+
+```
 58. 
 
 
+#### Lexical Scope
+In JavaScript, functions are executed using the scope in which they were defined, not where they are executed. This is known as lexical scope.
 
+```javascript
+function outer() {
+    const outerVar = 'I am outside!';
 
+    function inner() {
+        console.log(outerVar);
+    }
+
+    inner();
+}
+
+outer(); // Outputs: "I am outside!"
+
+```
+Closures are commonly used in asynchronous 
+
+```javascript
+
+function delayedGreeting(name) {
+    setTimeout(function() {
+        console.log(`Hello, ${name}!`);
+    }, 1000);
+}
+
+delayedGreeting('Alice'); // Outputs: "Hello, Alice!" after 1 second
+
+```
 
 
 
