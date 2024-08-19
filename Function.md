@@ -221,20 +221,274 @@ return ret;
 
 ## Default Parameters
 
+When you not pass a value to parameter it is `undefined` we know that.
+
+```javascript
+function add(x,y){
+return (x*y);
+}
+
+add(5,5); //25
+
+add(5);// NaN (not a number)
+
+//undefined is not a number 
+
+```
+
+Solution :- set some default value , to avoid failure
+
+```javascript
+function add(x=0,y=0){
+return x*y;
+}
+
+console.log(add(5,5)) //25
+
+console.log(add(5)) //0
+
+```
+In this way you can override the undefied value to of the parameters , be setting a default parameter. 
 
 
+## 2. Rest parameters
+
+Rest parameters allow a function to accept any number of arguments.
+
+```javascript
+//rest at last only
+//a function only can have one rest parameter
+
+function collectThings(x,...y){
+
+}
+
+//rest means , rest of it whatever is left include all
+//Thats why we define at the end 
 
 
+function collectThings(x,...y){
+console.log(x); //map 1st argument 
+console.log(y); //store all the rest argument (in array)
+}
+
+collectThings(1,2,3,4,5);
 
 
+//x= 1
+//y=[2,3,4,5]
+
+```
+
+Take rest array and loop to a particular function
+
+eg:-Summing Numbers
+
+```javascript
+
+function sumAll(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sumAll(1, 2, 3));        // Outputs: 6
+console.log(sumAll(5, 10, 15, 20));  // Outputs: 50
+console.log(sumAll(7));              // Outputs: 7
+
+```
+
+eg:- Combining Arguments
+
+```javascript
+
+function greet(greeting, ...names) {
+    return `${greeting} ${names.join(", ")}!`;
+}
+
+console.log(greet("Hello", "Alice", "Bob", "Charlie"));
+// Outputs: "Hello Alice, Bob, Charlie!"
+
+```
+the rest parameter provides a powerful and flexible way to handle function arguments, making your functions more adaptable and easier to work with. like :- When writing functions that may accept an unknown number of arguments., Variable inputs.
+
+## 3. Arrow function (fat arrow syntax)
+
+to write less amount of code.
+
+```javascript
+const add=function(x,y){
+return x+y;
+}
+
+//arrow function
+const add=(x,y) => {
+return x+y;
+}
+
+//for one line funcion
+const add = (x,y) => x+y;
 
 
+//With one parameter
+const add = x => x+x;
+
+```
+
+Because of its short syntax we use this arrow funciton.
+
+## 4. Nested Functions
+What does nesting mean? 
+First thing to understand about closure in jvascript function.
+
+```javascript
+function outerFunction() {
+    console.log("Outer");
+
+    // Nested function
+    function innerFunction() {
+        console.log("Inner");
+    }
+
+    // Calling the nested function
+    innerFunction();
+}
+
+// Calling the outer function
+outerFunction();
 
 
+//Outer
+//Inner
+//when invoke inner function
+
+```
+
+The outer function call read the defination of it , then it read the nested function and store its defination in its scope and when it encounter its call it return the output of it. 
 
 
+####  Key Characteristics of Nested Functions
+
+1. Scope Access: A nested function has access to the variables and parameters of its containing (outer) function. This is due to JavaScript's lexical scoping.
+2. Encapsulation: Nested functions help in encapsulating functionality. The inner function is only accessible within the outer function, which can help in keeping the global scope clean.
+
+```javascript
+
+function calculator(a, b) {
+    function add() {
+        return a + b;
+    }
+    
+    function subtract() {
+        return a - b;
+    }
+    
+    return {
+        sum: add(),
+        difference: subtract()
+    };
+}
+
+const result = calculator(5, 3);
+console.log(result.sum);        // Outputs: 8
+console.log(result.difference); // Outputs: 2
+
+```
+
+3. Closures: Nested functions often create closures. A closure is a function that retains access to its lexical scope, even when the outer function has finished execution.
+
+```javascript
+function outerFunction() {
+    const outerVar = 'I am outer';
+
+    function innerFunction() {
+        console.log(outerVar); // Can still access outerVar
+    }
+
+    return innerFunction;
+}
+
+const myInnerFunc = outerFunction();
+myInnerFunc(); // Outputs: "I am outer"
+
+```
+## 4. Function Scope
+Pohoch of a function
+
+Nested function and Scope is  related to each other. What are the vaiables that a nested function can access. 
+
+1. In a javascript file by default funcion is running globally , file is  a big box.
+2. funcion is a another box in the bigger box of that file.
+3. Two rules of closure (`1. variable inside a funcion is not accessed by anywhere outside the funcion, its protected, no one ouside the funcion can access its vaiable`) (`2. as opposite to it , a funcion can access all the variables inside the scope it is defined`)
+4. This two rules are valid for nested functions also. 
 
 
+```javascript
+
+function  deSomething(){
+let x = 10;
+const y = 20;
+var z = 30;
+
+console.log(x,y,z);
+}
+
+deSomething() //10 20 30
+
+// try to access vaiable of this funcion
+
+console.log(x); //ReferenceError: x is not defined
+console.log(y); //ReferenceError: y is not defined
+console.log(z); //ReferenceError: z is not defined
+
+//1st principle satisfied that you can not access the variable of a funcion outside of a function, it will show reference error.
+
+```
+
+```javascript
+
+let x = 10;
+const y = 20;
+var z = 30;
+
+function  deSomething(){
+console.log(x,y,z); 
+}
+deSomething(); // 10 20 30
+
+//2nd principle satisfied that a function can access the variable of its outer scope.
+
+```
+
+
+## 5. Closures
+
+This is a comples javascript topic and most asked interview question. 
+Learn by connecting dots.
+
+1. Take two nested funciion (inner or outer).
+2. Outer variable is accessible by the inner funcion, but inner vaiable is not accessible by the outer variable.
+3. The nested funcion is a `closure`
+4. Defination (A closure is a function that can have free variables together with the environment  that can run that variable)
+5. SO that we call that the inner funcion is called as closure. Its a packed that wraps all tht things.
+6. The cloud of a outer funcion is used by the inner function but the outer function can not use the inner function variable (inner function + its cloud == closure), or my defination is that ,` the outer function provide a environment for the servival of inner function is called as closure`;
+
+```javascript
+function outer(x){
+function inner(y){
+return x*y;
+}
+return inner;
+}
+
+const outerReturn = outer(10);
+//ineer funcion returned 
+//outer is over
+
+//The 10 is also live with inner function after the execution of outer funcion , because its closure that maintain the environment for inner function with required data for inner funcion. 
+
+```
+it is used to preserver the variable of outer function.
+
+58. 
 
 
 
