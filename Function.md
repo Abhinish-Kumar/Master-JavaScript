@@ -2,19 +2,21 @@
 
 Concepts >>>> syntax
 
-1. Function Fundamentals
-2. Function Declarations
-3. Function Execution
-4. Call Stack
-5. Arrow Functions
-6. Nested Functions
-7. Scope
-8. Closure
-9. Callback Functions
-10. Higher Order Function
-11. Pure Function
-12. IIFE
-13. Recursion
+## Table of Contents
+
+1. [Function Fundamentals](#1-function-fundamentals)
+2. [Function Declarations](#2-function-declarations)
+3. [Function Execution](#3-function-execution)
+4. [Call Stack](#4-call-stack)
+5. [Arrow Functions](#5-arrow-functions)
+6. [Nested Functions](#6-nested-functions)
+7. [Scope](#7-scope)
+8. [Closure](#8-closure)
+9. [Callback Functions](#9-callback-functions)
+10. [Higher-Order Functions](#10-higher-order-functions)
+11. [Pure Functions](#11-pure-functions)
+12. [IIFE](#12-iife)
+13. [Recursion](#13-recursion)
 
 ## 1. Function Fundamentals
 
@@ -23,12 +25,12 @@ Javascript allow us to write a block of code once and read it every time wheneve
 We are reducing the line of codes , and we are using the same code again and again. If we have  a bug , then we only need to change at single place in our function.
 In javascript we have functions without name also. The purpose of the name is that somebody can call us by that name . If we call the function with its name then function will say that heyy i am here with this lines of code , come and execute these lines of code.
 
-### Terminologies
+### Key Terminologies
 
-1. Functions/Methods
-2. Declaration/Defination
-3. Arguments/Parameters
-4. CallBack/Higher Order Functions
+1. **Functions/Methods**
+2. **Declaration/Definition**
+3. **Arguments/Parameters**
+4. **Callback/Higher-Order Functions**
 
 
 
@@ -185,10 +187,39 @@ console.log(factorial(5)); // Output: 120
 
 
 
+# Chapter 2
+
+## 1. Function Execution
+
+```javascript
+let p = x();
+
+//p store the executed output of x function. that we can use somewhere
+//when x() does not return any thing but it has line to log some value
+// in that case it return `undefined`
+//return thing is not defined yet.
+
+```
 
 
+```javascript
+//1st way
+function sum(a,b){
+return a + b;
+}
+
+sum(4,5); //9
+
+//2nd way
+function sum(a,b){
+let ret = a + b;
+return ret;
+}
+
+```
 
 
+## Default Parameters
 
 
 
