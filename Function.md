@@ -23,6 +23,41 @@ Javascript allow us to write a block of code once and read it every time wheneve
 We are reducing the line of codes , and we are using the same code again and again. If we have  a bug , then we only need to change at single place in our function.
 In javascript we have functions without name also. The purpose of the name is that somebody can call us by that name . If we call the function with its name then function will say that heyy i am here with this lines of code , come and execute these lines of code.
 
+### Terminologies
+
+1. Functions/Methods
+2. Declaration/Defination
+3. Arguments/Parameters
+4. CallBack/Higher Order Functions
+
+
+
+## 2. Function Declarations
+
+Funcyion holds a bunch of code that we can call again and again with its name. 
+
+To declare or define a function 
+
+`Declaration/Defination` both are same for functions. 
+Means creating a function with bunch of logic. 
+
+
+```javascript
+//function here is a keyword 
+function 
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
