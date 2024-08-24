@@ -596,22 +596,135 @@ Eg:- pizza hub. order pizza.
 
 ## 6. Higher Order Function
 
+A higher order function is a regular function that takes one or more function as an argument and return a function as a value. 
+COnditions for Higher Order Function
+
+1. It takes one or more functions as argument
+2. It may return a fucntion
+
+A call back function is a function which take a function as  an argument based on certain condition. what ever function we pass in a function as as argument it is going to invoke that function inside. (call this function when condition satisfied)
 
 
+Callback and HOF are not exactly same , because in callback function its not mendatory for a function to return a function. And when a funciton returns a function then it is called as higher order function.
 
 
+```javascript
+
+function getCapture(Camera){
+camera(); // callback function
+}
+getCapture(function(){
+console.log("canon");
+})
+
+```
+
+```javascript
+
+function returnFn(){
+return function(){
+console.log("returning")
+}
+}
+
+//1st way to execute this function
+const fn = returnFn(); //return a function
+
+fn() //execute the returned function
+
+//2nd way
+returnFn()();
+
+```
+`map filter reduce ` all are HOF you write a function in fileter for condition. 
 
 
+Lets deep dive into it.
+
+A Higher order function is a function that takes a function as an argument and return a function as return value. And it can do any one of then. Then it is called as higher order function. 
+
+```javascript
+
+//passing function as argument
+getCapture(function(){
+return "canon";
+}
+)
+
+//returning a function as a value
+function returnFn(){
+return function(){
+console.log("hi);
+}
+}
+
+```
+
+How It is useful 
 
 
+```javascript
+//Increment each element in array by 3
+function incrArr(arr,n){
+let result = [];
+
+for(const elem of arr){
+result.push(elem + n);
+}
+return result;
+}
+
+incrArr([1,2,3,4,5],2);
+
+//output :- [ 3, 4, 5, 6, 7 ]
+
+```
+
+1. You can use decrement also.
+2. For multiply to each element you need to change the function.
+
+Its not good , because we are repeating the code.
+
+Use Higher Order Function(create a `pure function`);
+
+**Pure Functions are the function that return same output for the same input.**
 
 
+```javascript
+//pure functions
+function decr(num,pad){
+return num - pad;
+}
+function mul(num,pad){
+return num * pad;
+}
+function incr(num,pad){
+return num + pad;
+}
 
+//Write higher order function
+//a function that take function as an argument
 
+function smartOperation(data,op,pad){
+//op is operation - + or function
+//pad value to increment or decrement 
+let result = [];
 
+for(const elem of data){
+result.push(op(elem,pad)) //pass element and data
+//op is any function that you pass as argument
+}
+return result;
+}
 
+//call the smart function
+let data=[1,2,3,4];
+console.log(smartOperation(data,incr,4))
 
+//[ 5, 6, 7, 8 ]
+```
 
+We are just taking the array and inside function we are calling the callback function with each value of the array and that callback function return the output and here we are saving the return value of the callback in to the result array.
 
 
 
