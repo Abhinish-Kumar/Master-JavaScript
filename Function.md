@@ -727,16 +727,37 @@ console.log(smartOperation(data,incr,4))
 We are just taking the array and inside function we are calling the callback function with each value of the array and that callback function return the output and here we are saving the return value of the callback in to the result array.
 
 
+Just by passing different callback you can change the functionality of the smartFunction.
+
+What ever the operation you want to do with your  array you cna do so. 
+These concept is used by array methods , Thats why we call `map,filter,reduce` are higher order functions.  
+
+The condition that you pass in filter is a function.
+
+```javascript
+data.filter(function(elem,index){
+return elem > 10;
+})
+```
+
+It accepts a function that why its HOF.
 
 
+NOte:- Highere Order function is not same as CallBack functions. Callback functions are the functions that we pass as an argument to another function. (at the function defination, then called as callback function) (and when you pass a function at calling time then its called as HOF). 
 
+eg: smartOperation is a higher order function thats excepting a function as an argument , and the function we are passing is called as callback function.
 
+```javascript
 
+//smartOperation a HOF
+//pad is CallBack function
+function smartOperation(data,op,pad){
+...
+...
+}
 
-
-
-
-
+```
+They both are related but they are not same. 
 
 
 
