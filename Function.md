@@ -761,10 +761,152 @@ They both are related but they are not same.
 
 
 
+## 7. Pure Function
+
+**A pure function is a function that produces the same output to the same input.**
+
+```javascript
+
+function sayGreeting(name){
+return `Hello ${name}`
+}
+
+sayGreeting("Abhinish");
+
+//same input same output every time
+
+```
+
+`Impure function`
+For same input it may return different Output 
+
+```javascript
+let hello = "Hello"; 
+function sayGreeting(name){
+//this function is dependent on another variable for output and it will give diff output when we chanage the value of the hello variable
+return `${hello} ${name}`
+}
 
 
+sayGreeting("Abhinish"); //Hello abhinish
+hello = "Hi"; 
+
+sayGreeting("Abhinish"); //Hi abhinish
 
 
+//same input different output 
+
+```
+
+It rerurns different output because of `Side Effect`. Side effect is nothing but the variable which is outside the scope of function. The variable which is ouside can be changed by anyone so that the particular function is no more Pure function. 
+
+This is the difference between Impre and Pure function.
+
+Note :- Deep dive into `pure function` and `SideEffect`
+
+
+In javascript functions are **First Class Citizen** 
+
+You can pass a function as an argument and can return a function as  a return value , you can assign a fucntion to a varible as a value. (You can do each and every thing with the function)
+
+
+```javascript
+
+function testMe(input){
+return `Testing ${input}`
+}
+
+const retVal = testMe(123);
+
+console.log(retVal); //Testing 123
+
+```
+
+What it will return 
+```javascript
+
+function testMe(input){
+
+}
+
+const retVal = testMe(123);
+
+console.log(retVal); //undefine
+
+```
+
+
+Characteristics of Pure function
+
+1. Predictable - produce same output for same input
+2. Redable - because function is independent and act as a standalone unit to understand the exect purpose of the function.
+3. Reusable - you can use the function at any place.
+4. Testable as a unit.
+
+
+Produces same output to the same input.
+
+
+```javascript
+//complex example
+//- mutating the inputs
+//- DOM manupulation
+
+function findReverse(users,item){
+//impure function - bc of mutating input
+const reversed = users.reverse(); //we are mutating the input directly
+
+const found = reversed.find((user)=>{
+return user === item; //return obj
+})
+
+//display the user
+document.getElementById("usr-id").innerText =found;
+
+//its impure because insted of returnin the output you are rendering the found user.
+
+}
+
+const users = ["A","B","C"];
+findReverse(users,"B"); //you con not undertand the functionality of this function until you read the defination
+//redability is compromised and predictibility is compromised 
+
+```
+
+
+How to make it pure function
+1. not mutatre the input at reverse (make clone then reverse)
+2. return value
+
+```javascript
+
+function findReverse(users,item){
+//clone the user so the input is as it is 
+const reversed = [...users].reverse();
+
+const found = reversed.find((user)=>{
+return user === item; //return obj
+})
+
+return found;
+
+}
+
+const users = ["A","B","C"];
+findReverse(users,"B"); //now it will return the same output to the same input
+
+const foundUser = findReverse(users,"B");
+
+document.getElementBYId("user-id").innerText = foundUser;
+
+```
+
+Now this function is more redable and more predictable the , it is reversing the user and returning the user data. It is acting as a particular unit and doing a particular job. 
+
+Note= You can write your application with the pure funcitons but side effects are also useful. **Isolate the impure part into another function like calling api** pure function is good.
+
+
+more... https://github.com/getify/Functional-Light-JS
 
 
 
