@@ -72,6 +72,45 @@ console.log(i--)
 ```
 
 
+## do-while
+
+It runs the loop first then it checks that it should repeat that or not. 
+You can check the condtion after the loop body executed.
+
+```javascript
+
+do{
+//loop body, write your code here
+}while(condition)
+
+```
+
+```javascript
+
+let i = 0;
+do{
+console.log(i);
+i++
+}while(i<3);
+
+
+//Output:
+
+//0
+//1
+//2
+
+```
+This type of loop you use when you want to run the loop body , at least once, no matter condition is true or false.
+
+
+
+
+
+
+
+
+
 
 
 
