@@ -39,3 +39,65 @@ myAccount.withdraw(2000); // Insufficient Balance
 
 
 ```
+
+
+
+## Design a cart
+
+```javascript
+  // implement a cart functionality with oop
+
+      class CartDashboard {
+        //not allow other to update the cart
+        #allProducts;
+        constructor() {
+          this.#allProducts = [{ name: "phone", price: 12000 }];
+        }
+        addProduct(name, price) {
+          let obj = { name: name, price: price };
+          this.#allProducts.push(obj);
+          return this.#allProducts;
+        }
+        deleteProduct(name) {
+          this.#allProducts = this.#allProducts.filter(
+            (obj) => obj.name !== name
+          );
+          return this.#allProducts;
+        }
+        display() {
+          this.#allProducts.map((obj) =>
+            console.log(`${obj.name} || ${obj.price}`)
+          );
+        }
+      }
+
+      let cart = new CartDashboard();
+      console.log(cart);
+      cart.addProduct("sellphone", 22000);
+      cart.addProduct("TV", 24400);
+      cart.addProduct("AC", 24400);
+    console.log(cart.addProduct("AC", 24400))
+      cart.deleteProduct("AC");
+      cart.display();
+```
+
+Output 
+
+```javascript
+CartDashboard {}
+[
+  { name: 'phone', price: 12000 },
+  { name: 'sellphone', price: 22000 },
+  { name: 'TV', price: 24400 },
+  { name: 'AC', price: 24400 },
+  { name: 'AC', price: 24400 }
+]
+phone || 12000
+sellphone || 22000
+TV || 24400
+```
+
+
+
+
+
